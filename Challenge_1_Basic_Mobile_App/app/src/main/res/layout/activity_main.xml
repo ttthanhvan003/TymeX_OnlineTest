@@ -20,16 +20,43 @@
         android:inputType="numberDecimal"/>
 
     <!-- From currency spinner -->
-    <Spinner
-        android:id="@+id/currencySpinnerFrom"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="From" />
+
+        <Spinner
+            android:id="@+id/currencySpinnerFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
     <!-- To currency spinner -->
-    <Spinner
-        android:id="@+id/currencySpinnerTo"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="To" />
+
+        <Spinner
+            android:id="@+id/currencySpinnerTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <!-- Convert button -->
     <Button
