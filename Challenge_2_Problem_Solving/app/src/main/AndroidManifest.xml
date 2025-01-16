@@ -13,10 +13,10 @@
         android:theme="@style/Theme.ProblemSolving"
         tools:targetApi="31">
         <activity
-            android:name=".test1.ProductManagement"
+            android:name=".test2.FindMissingNumber"
             android:exported="false" />
         <activity
-            android:name=".test2.FindMissingNumber"
+            android:name=".test1.ProductManagement"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

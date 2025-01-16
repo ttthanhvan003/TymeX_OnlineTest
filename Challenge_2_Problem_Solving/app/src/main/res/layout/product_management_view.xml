@@ -1,31 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".test1.ProductManagement">
 
-    <TextView
-        android:id="@+id/resultText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/productListLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kết quả sẽ xuất hiện ở đây"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/resultText">
 
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
+        <!-- Example product item -->
+        <TextView
+            android:id="@+id/product1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laptop - Price: 999.99 - Quantity: 5"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/product2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smartphone - Price: 499.99 - Quantity: 10"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/product3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tablet - Price: 299.99 - Quantity: 8"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/product4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smartwatch - Price: 199.99 - Quantity: 3"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tính toán"
-        app:layout_constraintBottom_toTopOf="@+id/resultText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tính toán" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:paddingTop="100px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kết quả sẽ xuất hiện ở đây"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
